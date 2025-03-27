@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",           // Altere de "commonJS" para "ESNext"
+    "target": "ES2024",           // Ou "ES6" ou "ES2020", conforme necessário
+    "esModuleInterop": true,      // Importação de módulos CommonJS
+    "strict": true,               // Habilita verificações de tipo rigorosas
+    "skipLibCheck": true,         // Ignora verificação de tipos nas bibliotecas
+    "outDir": "./build",          // Pasta de saída
+    "rootDir": "./",              // Diretório raiz
+    "moduleResolution": "node",   // Resolve módulos com regras do Node.js
+    "allowJs": true,              // Permite compilar arquivos JS se necessário
+    "resolveJsonModule": true,     // Permite importar arquivos JSON
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+  },
+  "include": ["src", "server.ts"]  // Certifique-se de incluir todos os arquivos TS
+}

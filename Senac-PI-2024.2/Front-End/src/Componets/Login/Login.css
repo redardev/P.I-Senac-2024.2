@@ -1,0 +1,141 @@
+/* Estilização geral */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container-login {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  margin-right: 300px;
+  background: url("../../assets/m-salao.png") no-repeat;
+}
+
+form {
+  background: white;
+  width: 500px;
+  padding: 40px;
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+  text-align: center;
+  transform: scale(1.2); /* Aplica o efeito de zoom (aumenta 20%) */
+  transform-origin: center; /* Mantém o zoom centrado */
+  transition: transform 0.3s ease-in-out; /* Suaviza a transição de zoom */
+}
+
+/* Opcional: ao passar o mouse sobre o formulário, ele aumenta um pouco mais */
+form:hover {
+  transform: scale(1.25); /* Zoom ainda maior ao passar o mouse */
+}
+
+form h1 {
+  /* ajustes do h1 Login do forms */
+  font-size: 50px; /* Aumenta o tamanho da fonte */
+  margin-bottom: 40px; /* Adiciona um espaçamento abaixo do título */
+  color: #333; /* Ajusta a cor do texto (opcional) */
+  font-weight: bold; /* Torna o texto mais negrito (opcional) */
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-field input {
+  width: 100%; /* Garante que o input ocupe toda a largura disponível */
+  padding: 15px 40px; /* Aumenta o padding para maior altura */
+  border: 2px solid #ccc;
+  border-radius: 25px; /* Mantém o border-radius arredondado */
+  outline: none;
+  transition: 0.3s;
+  font-size: 16px; /* Ajusta o tamanho da fonte, se necessário */
+  box-sizing: border-box; /* Inclui o padding na largura total */
+}
+
+.input-field input:focus {
+  border-color: #ff9900;
+}
+
+.input-field .icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.recall-forget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.recall-forget label {
+  font-size: 14px;
+  color: #333;
+}
+
+.recall-forget a {
+  font-size: 14px;
+  color: #ff9900;
+  text-decoration: none;
+}
+
+.recall-forget a:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: 100%; /* Garante que o botão ocupe toda a largura disponível */
+  padding: 15px 40px; /* Ajusta o padding para igualar a altura dos campos de entrada */
+  border: 2px solid #ccc; /* Cor da borda igual aos campos de input */
+  border-radius: 25px; /* Arredondamento dos cantos, igual aos campos de input */
+  background-color: #ff9900; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer; /* Aparece como um botão clicável */
+  transition: 0.3s; /* Transição suave ao passar o mouse */
+  box-sizing: border-box; /* Inclui o padding e a borda na largura total */
+}
+
+button:hover {
+  background-color: #cc7a00;
+}
+
+.signup-link {
+  margin-top: 20px;
+}
+
+.signup-link p {
+  font-size: 14px;
+  color: #333;
+}
+
+.signup-link a {
+  color: blue; /* Cor do texto */
+  text-decoration: underline; /* Adiciona o sublinhado */
+  text-decoration-color: blue; /* Cor azul para o sublinhado */
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.logo-image {
+  position: absolute;
+  top: 50px;
+  right: 60px;
+  width: 200px;
+  height: auto;
+}
+
+a.esqueciSenha {
+  color: blue;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}

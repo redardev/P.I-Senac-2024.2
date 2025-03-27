@@ -1,0 +1,122 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.container-cadastro {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  margin-right: 300px;
+  background: url("../../assets/m-salao.png") no-repeat;
+}
+
+form {
+  background: white;
+  width: 500px;
+  margin-right: 6vw;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transform: scale(1.1);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+form:hover {
+  transform: scale(1.2);
+}
+
+form h1 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  color: black;
+  font-weight: bold;
+}
+
+input {
+  color: white;
+}
+
+input::placeholder {
+  color: white;
+}
+
+.input-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 15px 40px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+.input-field input:focus {
+  border-color: #ff9900;
+}
+
+.input-field .icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+button {
+  width: 100%;
+  padding: 15px 40px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  background-color: #ff9900;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #cc7a00;
+}
+
+.signup-link {
+  margin-top: 20px;
+}
+
+.signup-link p {
+  font-size: 14px;
+  color: #333;
+}
+
+.signup-link a {
+  color: blue;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.logo-image {
+  position: absolute;
+  top: 50px;
+  right: 60px;
+  width: 200px;
+  height: auto;
+}

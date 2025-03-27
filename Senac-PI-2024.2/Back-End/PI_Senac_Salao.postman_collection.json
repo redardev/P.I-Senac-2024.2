@@ -1,0 +1,410 @@
+{
+	"info": {
+		"_postman_id": "e2671c97-0ed9-4f39-b9f0-b94b230bff62",
+		"name": "PI_Senac_Salao",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21555398"
+	},
+	"item": [
+		{
+			"name": "Create Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"CPF\": \"123.456.789-12\",\r\n  \"nome\": \"Lucas Silva\",\r\n  \"sexo\": \"Masculino\",\r\n  \"dataNasc\": \"1990-05-15 00:00:00\",\r\n  \"email\": \"lucas.silva@email.com\",\r\n  \"senha\": \"senha123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/salaoagil/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"salaoagil",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Login",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"CPF\": \"123.456.789-12\",\r\n  \"nome\": \"Lucas Silva\",\r\n  \"sexo\": \"Não definido\",\r\n  \"dataNasc\": \"1990-05-15 00:00:00\",\r\n  \"email\": \"lucas.silva@email.com\",\r\n  \"senha\": \"senha150\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/salaoagil/login/:email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"salaoagil",
+						"login",
+						":email"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "lucas.silva@email.com",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "email",
+							"value": "lucas.silva@email.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Email",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/salaoagil/login/:email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"salaoagil",
+						"login",
+						":email"
+					],
+					"variable": [
+						{
+							"key": "email",
+							"value": "lucas.silva@email.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/salaoagil/logins",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"salaoagil",
+						"logins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete login",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CPF\":\"123.456.789-10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/salaoagil/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"salaoagil",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete All Logins",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/salaoagil/logins",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"salaoagil",
+						"logins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Agendamento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "valorPago",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "dataHora",
+							"value": "2024/05/12 11:30:00",
+							"type": "text"
+						},
+						{
+							"key": "formaPagamento",
+							"value": "Pix",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/salaoagil/agendamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"salaoagil",
+						"agendamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Agendamento",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"valorPago\": \"30\",\r\n    \"dataHora\": \"2024/05/12 11:30:00\",\r\n    \"formaPagamento\": \"Débito\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/salaoagil/agendamento/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"salaoagil",
+						"agendamento",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Agendamento By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/salaoagil/agendamento/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"salaoagil",
+						"agendamento",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Agendamentos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/salaoagil/agendamentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"salaoagil",
+						"agendamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Agendamento",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/agendamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agendamento"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todos agendamentos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/agendamentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agendamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Servico",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nomeServico\":\"Corte\",\r\n    \"valor\":35\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/servico",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"servico"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
